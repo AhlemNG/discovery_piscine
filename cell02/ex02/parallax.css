@@ -1,0 +1,87 @@
+.div1{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/dog1.jpeg);
+}
+
+.div1 .tex1{
+  position: sticky;
+  color: rgb(204, 25, 25);
+  text-align: center;
+  /* vertical-align: top; */
+  top: 50%;
+  bottom: 50%;
+}
+
+.div2{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.div2{
+    width: 100%;
+    height: 50%;
+}
+.div2 .tex1{
+    /* position: sticky; */
+    color: white;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+.div1{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/dog1.jpeg);
+}
+
+.div1 .tex1{
+  position: sticky;
+  color: rgb(204, 25, 25);
+  text-align: center;
+  /* vertical-align: top; */
+  top: 50%;
+  bottom: 50%;
+}
+
+.div2{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.div2{
+    width: 100%;
+    height: 50%;
+}
+.div2 .tex1{
+    /* position: sticky; */
+    color: white;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+.div3{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/dog2.jpeg);
+
+}
+.div3 .tex1{
+    position: absolute;
+    color: rgb(204, 25, 25);
+    /* text-align: center; */
+    /* vertical-align: top; */
+    top: 50%;
+    /* bottom: 50%; */
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
