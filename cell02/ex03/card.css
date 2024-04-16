@@ -1,0 +1,16 @@
+table{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 400px;
+    height: 200;
+}
+.profile-photo img{
+    width: 100px;
+    height: 100px;
+    /* background-position: center; */
+}
+.button input{
+    background-color: black;
+    color: white;
+}
