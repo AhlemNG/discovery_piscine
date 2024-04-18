@@ -1,3 +1,4 @@
+
 var button = document.getElementById("changeColorButton");
 var fontSize = 16;
 

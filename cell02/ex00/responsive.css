@@ -1,5 +1,5 @@
 .tab-container{
-    overflow-x: auto; /* Ajout de défilement horizontal */
+    overflow-x: auto; //Ajout de défilement horizontal
 }
 .tab {
     /* style="overflow-x:auto;" */

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>To do or not to do</title>
+        <style>
+            body{
+                align-items: center;
+            }
+            .button{
+                color: white;
+                font-size: 1em;
+                border-radius: 5px;
+                background-color: #333;
+                border: none;
+                cursor: pointer; 
+                padding: 8px 12px;
+                margin: auto;
+                display: block;
+            }
+            h1{
+                text-align: center;
+                color: lightblue
+            }
+            .taskList{
+                margin-top: 20px; /* Adjust as needed */
+                padding: 10px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                max-width: 400px; /* Adjust as needed */
+                margin-left: auto; /* Center horizontally */
+                margin-right: auto; /* Center horizontally */
+            }
+        </style>
+    </head>
+    <body>
+        <input class="button" type="button" id="button" value="New">
+        <h1> To-Do-List</h1>
+        <div class="taskList" id="ft_list">
+            <!-- Tasks will be appended here -->
+        </div>
+        <script src="todo.js"></script>
+    </body>
+</html>
