@@ -2,38 +2,91 @@
     <head>
         <title></title>
         <style>
-            .body{
+            body{
                 color: black;
+                text-align: center;
+                background-position: center;
+                border-bottom: 20px;
             }
             .leftM{
                 background-color: aqua;
+                border-width: 3px;
+                width: 90px;
+                height: 20px;
             }
             .op{
                 background-color: rgb(0, 153, 255);
-                width: 40px
+                width: 40px;
+                height: 20px;
+                border-width: 3px;
             }
             .rightM{
                 background-color: slateblue;
+                border-width: 3px;
+                width: 90px;
+                height: 20px;
             }
             .sub{
-                background-color: brown
+                background-color: rgb(129, 209, 109)
             }
         </style>
     </head>
     <body>
-        <input class="leftM" type="text" name="leftMember", id="leftMember">
-        <select class="op" name="operator" id="">
+        <input class="leftM" type="text" name="leftMember" id="leftMember">
+        <select class="op" name="operator" id="operator">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="/">/</option>
             <option value="*">*</option>
+            <option value="%">%</option>
 
         </select>
-        <input class="leftM" type="text" name="leftMember">
-        <input class="sub" type="submit" name="submit" value="Try me">
+        <input class="rightM" type="text" name="rightMember" id="rightMember">
+        <input class="sub" type="submit" name="submit" value="Try me" id="submit">
         <script>
-            let left = leftMember.value;
-            console.log(right);
+            document.getElementById("submit").addEventListener("click", function() {
+                var left = parseInt(document.getElementById("leftMember").value);
+                var operator = document.getElementById("operator").value;
+                var right = parseInt(document.getElementById("rightMember").value);
+
+                if (isNaN(left) || isNaN(right) || left < 0 || right < 0)
+                {
+                    alert("Error :(");
+                    console.log("Error :(")
+                }
+                else
+                {
+                    var res;
+                    switch(operator){
+                        case "+":
+                            res = left + right;
+                            break;
+                        case "-":
+                            res = left - right;
+                            break;
+                        case "/":
+                        if (right === 0) {
+                            alert("It's over 9000!");
+                            console.log("It's over 9000!");
+                            return;
+                        }
+                            res = left / right;
+                            break;
+                        case "*":
+                            res = left * right;
+                            break;
+                        case "%":
+                        res = left % right;
+                        break;
+                    }
+                    alert(res);
+                    console.log(res);
+                }
+            });
+
+            setInterval(function() {
+                alert("Please, use me :)");
+            }, 30000);
         </script>
     </body>
 </html>
