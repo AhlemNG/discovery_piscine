@@ -76,8 +76,13 @@
                             res = left * right;
                             break;
                         case "%":
-                        res = left % right;
-                        break;
+                            if (right === 0) {
+                                alert("It's over 9000!");
+                                console.log("It's over 9000!");
+                                return;
+                            }
+                            res = left % right;
+                            break;
                     }
                     alert(res);
                     console.log(res);
