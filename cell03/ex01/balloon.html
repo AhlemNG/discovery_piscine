@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>balloon</title>
+    <style> /*css*/
+        .balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon" class="balloon"></div>
+    <script>/*js*/
+        const balloon = document.getElementById("balloon");
+        let size = 200;
+        let index = 0;
+        const colors = ["red", "green", "blue"];
+        
+        balloon.addEventListener("click", function(){
+            size += 10;
+            if (size > 420) {
+                size = 200;
+                index = 0;
+            }
+            balloon.style.width = `${size}px`;
+            balloon.style.height = `${size}px`;
+            index = (index + 1) % colors.length;
+            balloon.classList.remove("red", "green", "blue");
+            balloon.classList.add(colors[index]);
+        });
+        balloon.addEventListener("mouseleave", function(){
+            size -= 5;
+            if (size < 200) {
+                size = 200;
+            }
+            balloon.style.width = `${size}px`;
+            balloon.style.height = `${size}px`;
+            index = (index - 1 + colors.length) % colors.length;
+            balloon.classList.remove("red", "green", "blue");
+            balloon.classList.add(colors[index]);
+        });
+    </script>
+</body>
+</html>
+
+
+
